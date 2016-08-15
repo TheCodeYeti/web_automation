@@ -5,4 +5,5 @@ Feature: In order to shop on the Loblaws site users must be able to search for p
     Then I write "apples" in the "search-bar" "text field"
     Then I hit the "enter" key
     Then I click on the "button" with the "data-sort-type" "price-asc"
+    Then I wait for "5" seconds
     Then I should see a list of "products" sorted by "price"
