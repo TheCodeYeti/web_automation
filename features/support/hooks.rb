@@ -4,7 +4,7 @@ require 'watir-webdriver'
 
 Before do
   @browser = Watir::Browser.new :chrome
-
+  # binding.pry
 
 end
 
@@ -13,7 +13,7 @@ After do
   @browser.close
 end
 
-# 
+#
 # site = 'https://www.loblaws.ca/'
 # @browser.goto site
 # @browser.div(:class => 'search-button active').click
