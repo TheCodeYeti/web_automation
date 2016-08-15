@@ -3,5 +3,7 @@ Feature: In order to shop on the Loblaws site users must be able to search for p
     Given I am on the Loblaws home page
     Then I click on the "search-button" "div"
     Then I write "apples" in the "search-bar" "text field"
-    When I hit the "enter" key
-    Then I should see a list of products that match "apples"
+    Then I hit the "enter" key
+    Then I wait for the "page-search-results" "div" to load
+    Then I click on the "price-asc" "button"
+    Then I should see a list of "products" sorted by "price"
