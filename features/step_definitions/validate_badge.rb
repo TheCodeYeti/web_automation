@@ -18,8 +18,7 @@ Then(/^the amount on the badge and the price reduction match$/) do
       error_list += "#{name} badge savings of #{badge_savings_string} does not match given sale price of #{current_price_string} and an original price of #{old_price_string}\n"
     end
 
-    # binding.pry
   end
-raise error_list if error_list
+  raise error_list if error_list
 
 end
