@@ -1,10 +1,13 @@
-Then(/^I click on the "([^"]*)" with the "([^"]*)" "([^"]*)"$/) do |element_type, selector_type, selector|
+When(/^I click on the "([^"]*)" with the "([^"]*)" "([^"]*)"$/) do |element_type, selector_type, selector|
   selector_type.gsub!(/-/, '_')
   case element_type.downcase
-  when "div"
-    @browser.div({selector_type.downcase.to_sym => selector.downcase}).when_present.click
   when "button"
-    @browser.button({selector_type.downcase.to_sym => selector.downcase}).when_present.click
+    @browser.button({selector_type.downcase.to_sym => selector.downcase}).click
+  when "div"
+    @browser.div({selector_type.downcase.to_sym => selector.downcase}).click
+  when "h5"
+    @browser.h5({selector_type.downcase.to_sym => selector.downcase}).click
+  when "label"
+    @browser.label({selector_type.downcase.to_sym => selector.downcase}).click
   end
-  # binding.pry
 end
