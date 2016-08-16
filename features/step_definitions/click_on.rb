@@ -9,5 +9,7 @@ When(/^I click on the "([^"]*)" with the "([^"]*)" "([^"]*)"$/) do |element_type
     @browser.h5({selector_type.downcase.to_sym => selector.downcase}).click
   when "label"
     @browser.label({selector_type.downcase.to_sym => selector.downcase}).click
+  when "link"
+    @browser.a({selector_type.downcase.to_sym => selector.downcase}).click
   end
 end
