@@ -11,6 +11,8 @@ Then(/^the name and address should match the previous page$/) do
     error_list ||= "Store info test failed for the following reassons:\n"
     error_list += "Store address on search page of #{@store_address} does not match store address on store page of #{store_address}\n"
   end
+  
+  raise StandardError.new(error_list) if error_list
 
 end
 
