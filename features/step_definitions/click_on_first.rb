@@ -1,6 +1,6 @@
 When(/^I click on the first "([^"]*)" with the "([^"]*)" "([^"]*)"$/) do |element_type, selector_type, selector|
   selector_type.gsub!(/-/, '_')
-  binding.pry
+  # binding.pry
   case element_type.downcase
   when "button"
     @browser.buttons({selector_type.downcase.to_sym => selector.downcase}).first.click
