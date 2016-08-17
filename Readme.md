@@ -478,6 +478,3 @@ methods
  :__id__,
  :should,
  :should_not]
-
-
-@browser.link(data_store_title: "Lower Jarvis Street, Toronto").click
