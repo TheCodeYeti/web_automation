@@ -11,7 +11,7 @@ When(/^the price in kg is equivalent to the price in lbs$/) do
         per_lb = per_unit_text.split(" / kg")[1].tr('$/ lb','').to_f
 
         unless (per_kg / 2.20462262185).round(2) == per_lb
-          error_list ||= "kg vs lbs test failed for the following reassons:\n"
+          error_list ||= "kg vs lbs test failed for the following reasons:\n"
           error_list += "#{name} cost per kg of $#{per_kg} does not match with cost per lb of $#{per_lb} cost per lb should be $#{per_kg / 2.20462262185}\n"
         end
 

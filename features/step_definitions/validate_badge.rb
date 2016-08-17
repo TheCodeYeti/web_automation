@@ -14,7 +14,7 @@ Then(/^the amount on the badge and the price reduction match$/) do
     name = item.a(class: "product-name").text
 
     unless (old_price - current_price).round(2) == badge_savings
-      error_list ||= "Badge test failed for the following reassons:\n"
+      error_list ||= "Badge test failed for the following reasons:\n"
       error_list += "#{name} badge savings of #{badge_savings_string} does not match given sale price of #{current_price_string} and an original price of #{old_price_string}\n"
     end
 

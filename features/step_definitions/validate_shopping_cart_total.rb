@@ -19,7 +19,7 @@ Then(/^the shopping cart total should show the amount from the first "([^"]*)" w
   end
 
   unless cart_total.tr('$','').to_f == price_to_verify.tr('$','').to_f
-    error_list ||= "Add to cart test failed for the following reassons:\n"
+    error_list ||= "Add to cart test failed for the following reasons:\n"
     error_list += "Cart should be showing a total of #{price_to_verify} but instead shows #{cart_total}\n"
   end
 
