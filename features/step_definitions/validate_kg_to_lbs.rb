@@ -4,7 +4,6 @@ When(/^the price in kg is equivalent to the price in lbs$/) do
 
     name = item.a(class: "product-name").text
     per_unit_text = item.span(class: "reg-qty").text.split("\n")[1]
-
     if per_unit_text
       if (per_unit_text.include? "kg") && (per_unit_text.include? "lb")
         per_kg = per_unit_text.split(" / kg")[0].tr('$','').to_f
